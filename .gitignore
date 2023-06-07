@@ -1,41 +1,122 @@
-# Compiled Lua sources
-luac.out
+-- Instances: 8 | Scripts: 1 | Modules: 0
+local SFHV3 = {};
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+-- StarterGui.Criminality Loading Screen
+SFHV3["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+SFHV3["1"]["Name"] = [[Criminality Loading Screen]];
+SFHV3["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+-- StarterGui.Criminality Loading Screen.LoadFrame
+SFHV3["2"] = Instance.new("Frame", SFHV3["1"]);
+SFHV3["2"]["ZIndex"] = 10;
+SFHV3["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+SFHV3["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+SFHV3["2"]["Name"] = [[LoadFrame]];
 
-# Precompiled Headers
-*.gch
-*.pch
+-- StarterGui.Criminality Loading Screen.LoadFrame.LoadText
+SFHV3["3"] = Instance.new("TextLabel", SFHV3["2"]);
+SFHV3["3"]["TextWrapped"] = true;
+SFHV3["3"]["TextScaled"] = true;
+SFHV3["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SFHV3["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+SFHV3["3"]["TextSize"] = 14;
+SFHV3["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SFHV3["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+SFHV3["3"]["Size"] = UDim2.new(0.6117600798606873, 0, 0.06327063590288162, 0);
+SFHV3["3"]["Text"] = [[STARTING LOADINGS...]];
+SFHV3["3"]["Name"] = [[LoadText]];
+SFHV3["3"]["BackgroundTransparency"] = 1;
+SFHV3["3"]["Position"] = UDim2.new(0.49900001287460327, 0, 0.4749999940395355, 0);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+-- StarterGui.Criminality Loading Screen.LoadFrame.RandomMessage
+SFHV3["4"] = Instance.new("TextLabel", SFHV3["2"]);
+SFHV3["4"]["TextWrapped"] = true;
+SFHV3["4"]["ZIndex"] = 101;
+SFHV3["4"]["TextScaled"] = true;
+SFHV3["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SFHV3["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SFHV3["4"]["TextSize"] = 16;
+SFHV3["4"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+SFHV3["4"]["AnchorPoint"] = Vector2.new(0.5, 0);
+SFHV3["4"]["Size"] = UDim2.new(0.6119999885559082, 0, 0.06300000101327896, 0);
+SFHV3["4"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+SFHV3["4"]["Text"] = [[Sword Fight Hub v0.0.3]];
+SFHV3["4"]["Name"] = [[RandomMessage]];
+SFHV3["4"]["BackgroundTransparency"] = 1;
+SFHV3["4"]["Position"] = UDim2.new(0.49900001287460327, 0, 0.3499999940395355, 0);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+-- StarterGui.Criminality Loading Screen.LoadFrame.Tip
+SFHV3["5"] = Instance.new("TextLabel", SFHV3["2"]);
+SFHV3["5"]["TextWrapped"] = true;
+SFHV3["5"]["ZIndex"] = 101;
+SFHV3["5"]["TextScaled"] = true;
+SFHV3["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SFHV3["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SFHV3["5"]["TextSize"] = 14;
+SFHV3["5"]["TextColor3"] = Color3.fromRGB(50, 50, 50);
+SFHV3["5"]["AnchorPoint"] = Vector2.new(0.5, 0);
+SFHV3["5"]["Size"] = UDim2.new(0.30000001192092896, 0, 0.03999999910593033, 0);
+SFHV3["5"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+SFHV3["5"]["Text"] = [[Note: If you see a person that tween tps and says that they are the owner make sure if he messages you and says he is.]];
+SFHV3["5"]["Name"] = [[Tip]];
+SFHV3["5"]["BackgroundTransparency"] = 1;
+SFHV3["5"]["Position"] = UDim2.new(0.5, 0, 0.8999999761581421, 0);
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+-- StarterGui.Criminality Loading Screen.Handler
+SFHV3["6"] = Instance.new("LocalScript", SFHV3["1"]);
+SFHV3["6"]["Name"] = [[Handler]];
 
+-- StarterGui.Criminality Loading Screen.Sounds
+SFHV3["7"] = Instance.new("Folder", SFHV3["1"]);
+SFHV3["7"]["Name"] = [[Sounds]];
+
+-- StarterGui.Criminality Loading Screen.Sounds.Boom
+SFHV3["8"] = Instance.new("Sound", SFHV3["7"]);
+SFHV3["8"]["Volume"] = 1.5;
+SFHV3["8"]["Name"] = [[Boom]];
+SFHV3["8"]["SoundId"] = [[rbxassetid://1638627089]];
+
+-- StarterGui.Criminality Loading Screen.Handler
+local function C_6()
+local script = SFHV3["6"];
+	-- \\ Services // --
+	local Tween = game:GetService("TweenService")
+	
+	-- \\ Variables // --
+	local LoadText = script.Parent.LoadFrame.LoadText
+	local LoadFrame = script.Parent.LoadFrame
+	local SoundFolder = script.Parent.Sounds
+	
+	-- \\ Loader // --
+	wait(5)
+	LoadText.Text = "LOADING UI." warn(">>> LOADED UI")
+	wait(0.3)
+	LoadText.Text = "LOADING TABS.." warn(">>> LOADED TABS")
+	wait(0.3)
+	LoadText.Text = "LOADING BUTTONS.." warn(">>> LOADED BUUTONS")
+	wait(0.3)
+	LoadText.Text = "LOADING LABELS..." warn(">>> LOADED LABELS")
+	wait(0.3)
+	LoadText.Text = "LOADING TOGGLES." warn(">>> LOADED TOGGLES")
+	wait(0.3)
+	LoadText.Text = "LOADING ASSETS..." warn(">>> LOADED ASSETS")
+	wait(0.3)
+	LoadText.Text = "LOADING COLORS." warn(">>> LOADED COLORS")
+	wait(0.3)
+	LoadText.Text = "RELOADING CHARACTER.." warn(">>> RELOADED CHARACTER")
+	wait(0.3)
+	LoadText.Text = "RELOADING UI..." warn(">>> RELOADED UI")
+	wait(math.random(1,2))
+	LoadText.Text = "FREE VERSION LOADED" warn(">>> FINISHED LOADING")
+	SoundFolder.Boom:Play()
+	wait(2)
+	
+	-- \\ Tween // --
+	Tween:Create(LoadFrame,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{BackgroundTransparency = 1}):Play()
+	Tween:Create(LoadText,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{TextTransparency = 1}):Play()
+	Tween:Create(LoadFrame.RandomMessage,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{TextTransparency = 1}):Play()
+	Tween:Create(LoadFrame.Tip,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{TextTransparency = 1}):Play()
+end;
+task.spawn(C_6);
+
+return SFHV3["1"], require;
